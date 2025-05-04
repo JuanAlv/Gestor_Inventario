@@ -13,7 +13,6 @@ include('../../database/conexion.php');
 </head>
 
 <body>
-
     <?php
     if ($conexion) {
         echo "<script>alert('Conexión exitosa a la base de datos');</script>";
