@@ -1,5 +1,5 @@
 <?php
-//Conexion a la base de datos ssdsds
+//Conexion a la base de datos
 $servername = "localhost";
 $username = "root";
 $password = "123456";
