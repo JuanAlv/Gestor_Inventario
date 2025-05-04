@@ -15,7 +15,6 @@ include('../../database/conexion.php');
 <body>
 
     <?php
-    // Si la conexión está activa (usa la variable de conexión que tengas)
     if ($conexion) {
         echo "<script>alert('Conexión exitosa a la base de datos');</script>";
     } else {
