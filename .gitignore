@@ -46,3 +46,4 @@ Thumbs.db
 phpunit.xml
 phpcs.xml
 phpmd.xml
+database/conexion.php
