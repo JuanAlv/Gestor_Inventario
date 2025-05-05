@@ -2,7 +2,7 @@
 //Conexion a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "juanluna12345";
+$password = "";
 $dbname = "gestor_inventario";
 
 $conexion = new mysqli($servername, $username, $password, $dbname);
