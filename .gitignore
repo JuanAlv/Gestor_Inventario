@@ -1,0 +1,48 @@
+# Archivo de conexión a la base de datos (contiene credenciales)
+database/conexion.php
+
+# Archivos y carpetas comunes para ignorar en proyectos PHP
+# Archivos de configuración local
+*.env
+.env.local
+.env.*.local
+
+# Archivos de dependencias
+/vendor/
+node_modules/
+
+# Archivos de caché y logs
+*.log
+/logs/
+/cache/
+*.cache
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE y editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Archivos de respaldo
+*~
+*.bak
+*.backup
+
+# Archivos compilados
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archivos de configuración personal
+phpunit.xml
+phpcs.xml
+phpmd.xml
