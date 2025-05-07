@@ -1,4 +1,5 @@
 <?php
+// Clase Usuario
 class Usuario {
     public $id;
     public $nombre;
