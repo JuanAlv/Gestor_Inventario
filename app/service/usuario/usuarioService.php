@@ -1,5 +1,6 @@
 <?php
 require_once 'models/Usuario.php';
+// Servicio de usuarios
 class UsuarioService {
     private $conn;
 
