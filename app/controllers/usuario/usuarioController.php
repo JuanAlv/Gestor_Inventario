@@ -83,7 +83,7 @@ class UsuarioController {
         }
     }
     
-    // Validar los datos del usuario
+    // Validar los datos de usuario
     private function validarDatos($data) {
         // Campos requeridos
         $requiredFields = [
