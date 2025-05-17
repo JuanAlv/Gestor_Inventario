@@ -80,7 +80,7 @@ class UsuarioController {
         }
     }
     
-    // Actualizar un usuario existente
+    // Actualizar un usuario ya existente
     public function actualizar($id, $datos) {
         // Validar datos
         $errores = $this->validarDatos($datos, true);
@@ -93,7 +93,7 @@ class UsuarioController {
             return ['exito' => false, 'errores' => ['El documento o correo ya existen en otro usuario'], 'tipo' => 'error'];
         }
         
-        // Crear objeto Usuario
+        // Actualizar datos
         $usuario = new Usuario([
             'id' => $id,
             'nombre' => $datos['nombre'],
@@ -130,6 +130,7 @@ class UsuarioController {
     // Validar datos
     private function validarDatos($datos, $esActualizacion = false) {
         $errores = [];
+        
     // Validar campos
         if (empty($datos['nombre'])) {
             $errores[] = 'El nombre es obligatorio';

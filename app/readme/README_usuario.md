@@ -1,6 +1,6 @@
 # Documentación de Componentes de Usuario
 
-Este documento describe la estructura y relaciones entre los componentes relacionados con la gestión de usuarios en el sistema de Gestor de Inventario.
+Este documento describe la estructura y relaciones entre los componentes relacionados con la gestión de usuarios en el sistema de Gestor de Inventario. 
 
 ## Estructura de Archivos
 
@@ -71,3 +71,12 @@ Esta arquitectura sigue el patrón MVC (Modelo-Vista-Controlador) donde:
 - **Modelo**: Representa los datos y la lógica de negocio
 - **Servicio**: Proporciona una capa de abstracción para operaciones de datos
 - **Controlador**: Maneja las solicitudes y coordina las respuestas
+
+## Integración con el Sistema de Login
+
+El componente de Usuario está estrechamente relacionado con el sistema de Login:
+
+- El sistema de Login utiliza la tabla de usuarios para verificar credenciales
+- La autenticación se basa en el correo y contraseña almacenados en el modelo de Usuario
+- El estado del usuario (activo/inactivo) determina si puede iniciar sesión
+- Los roles de usuario definidos en este componente determinan los permisos después de la autenticación
