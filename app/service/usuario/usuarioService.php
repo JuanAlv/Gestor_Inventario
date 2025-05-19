@@ -82,6 +82,7 @@ class UsuarioService {
     
     // Actualizar un usuario
     public function actualizarUsuario(Usuario $usuario) {
+        
         // Si la contraseña está presente y no está vacía, actualizarla también
         if (!empty($usuario->contrasena)) {
             $sql = "UPDATE usuarios SET nombre = ?, apellido = ?, correo = ?, documento = ?, id_tipo_documento = ?, id_rol = ?, contrasena = ?, id_estado = ? WHERE id = ?";
