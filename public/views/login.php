@@ -25,20 +25,9 @@ if ($loginController->estaAutenticado()) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { background-color: #f8f9fa; }
-        .login-container {
-            max-width: 450px;
-            margin: 100px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-        .login-header { text-align: center; margin-bottom: 30px; }
-        .btn-login { background-color: #007bff; }
-        .alert { display: none; margin-top: 20px; }
-    </style>
+
+     <!-- Estilos personalizados PENDIENTES POR MEJORAR-->
+     <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
     <div class="container">
@@ -97,45 +86,6 @@ if ($loginController->estaAutenticado()) {
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
-    <script>
-        $(document).ready(function() {
-            // Mostrar/ocultar contraseña
-            $('#togglePassword').click(function() {
-                const passwordField = $('#contrasena');
-                const type = passwordField.attr('type') === 'password' ? 'text' : 'password';
-                passwordField.attr('type', type);
-                $(this).find('i').toggleClass('fa-eye fa-eye-slash');
-            });
-            
-            // Enviar formulario con AJAX
-            $('#loginForm').submit(function(e) {
-                e.preventDefault();
-                $('#errorAlert, #successAlert').hide();
-                
-                $.ajax({
-                    url: '/Gestor_Inventario/app/controllers/login/loginController.php',
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.exito) {
-                            $('#successMessage').text(response.mensaje);
-                            $('#successAlert').show();
-                            setTimeout(function() {
-                                window.location.href = '/Gestor_Inventario/public/views/index.php';
-                            }, 1000);
-                        } else {
-                            $('#errorMessage').text(response.errores.join('. '));
-                            $('#errorAlert').show();
-                        }
-                    },
-                    error: function() {
-                        $('#errorMessage').text('Error al procesar la solicitud. Intente nuevamente.');
-                        $('#errorAlert').show();
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="../JS/login.js"></script>
 </body>
 </html>

@@ -32,31 +32,7 @@ $usuario = $loginController->obtenerUsuarioAutenticado();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Estilos personalizados PENDIENTES POR MEJORAR-->
-    <style>
-        body { background-color:rgb(149, 255, 181); }
-        .sidebar {
-            min-height: 100vh;
-            background-color:rgb(43, 45, 47);
-            color: white;
-        }
-        .sidebar-link {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-            transition: all 0.3s;
-        }
-        .sidebar-link:hover { background-color: rgba(255, 255, 255, 0.1); color: white; }
-        .sidebar-link.active { background-color: #007bff; color: white; }
-        .content { padding: 20px; }
-        .welcome-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-bottom: 20px;
-        }
-    </style>
+     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 
 <body>
@@ -193,29 +169,6 @@ $usuario = $loginController->obtenerUsuarioAutenticado();
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
-    <script>
-        $(document).ready(function() {
-            // Función para cerrar sesión
-            function cerrarSesion() {
-                $.ajax({
-                    url: '/Gestor_Inventario/app/controllers/login/loginController.php',
-                    type: 'POST',
-                    data: {accion: 'cerrar_sesion'},
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.exito) {
-                            window.location.href = '/Gestor_Inventario/public/views/login.php';
-                        }
-                    }
-                });
-            }
-            
-            // Asignar evento a los botones de cerrar sesión
-            $('#cerrarSesion, #cerrarSesionDropdown').click(function(e) {
-                e.preventDefault();
-                cerrarSesion();
-            });
-        });
-    </script>
+    <script src="../JS/cerrarsesion.js"></script>
 </body>
 </html>

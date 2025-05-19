@@ -1,0 +1,23 @@
+body { background-color:rgb(149, 255, 181); }
+.sidebar {
+    min-height: 100vh;
+    background-color:rgb(43, 45, 47);
+    color: white;
+}
+.sidebar-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s;
+}
+.sidebar-link:hover { background-color: rgba(255, 255, 255, 0.1); color: white; }
+.sidebar-link.active { background-color: #007bff; color: white; }
+.content { padding: 20px; }
+.welcome-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+}
